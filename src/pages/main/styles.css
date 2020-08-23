@@ -3,7 +3,7 @@
 }
 
 .landing-page .logo-container {
-    height: 65%;
+    height: 60%;
     background-color: var(--color-primary-lighter);
     border-bottom: var(--color-secondary) 20px solid;
 
