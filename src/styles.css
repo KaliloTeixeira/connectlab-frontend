@@ -20,10 +20,20 @@
 }
 
 html, body, .App {
-    height: 100vh;
+    height: 98vh;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #F2F2F2;
+}
+
+@media(min-width: 750px) {
+    :root {
+        font-size: 85%;
+    }
+
+    html, body, .App {
+        height: 100vh;
+    }
 }

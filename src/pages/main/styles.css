@@ -1,9 +1,9 @@
 .landing-page {
-    height: 100%;
+    height: 98%;
 }
 
 .landing-page .logo-container {
-    height: 60%;
+    height: 63%;
     background-color: var(--color-primary-lighter);
     border-bottom: var(--color-secondary) 20px solid;
 
@@ -31,7 +31,7 @@
 }
 
 .landing-page .btn-container {
-    height: 35%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@
     margin: 5px 3%;
     width: 70%;
     max-width: 350px;
-    height: 35%;
+    height: 40%;
 
     display: flex;
     justify-content: center;
@@ -76,4 +76,14 @@
 
 .landing-page .btn-container #school {
     background-color: var(--color-primary);
+}
+
+@media(min-width: 750px){
+    .landing-page {
+        height: 100%;
+    }
+
+    .landing-page .logo-container {
+        height: 65%;
+    }
 }
