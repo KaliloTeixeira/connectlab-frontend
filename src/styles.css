@@ -1,0 +1,29 @@
+:root {
+    --color-background: #f2f2f2;
+    --color-primary: #00B8B8;
+    --color-primary-lighter: #66D4D4;
+
+    --color-secondary: #828282;
+    --color-secondary-lighter: #f2f2f2;
+
+    --color-text-in-green: #f2f2f2;
+    --color-text-in-white: #828282;
+
+    font-size: 60%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body, .App {
+    height: 100vh;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F2F2F2;
+}
