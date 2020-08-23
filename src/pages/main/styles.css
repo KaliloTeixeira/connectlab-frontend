@@ -1,5 +1,6 @@
 .landing-page {
     height: 98%;
+    overscroll-behavior-y: none;
 }
 
 .landing-page .logo-container {
@@ -16,7 +17,7 @@
 
     width: 80%;
     max-width: 750px;
-    -webkit-filter: drop-shadow(-0.3rem 0.3rem 0.2rem rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(-0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5));
 
 }
 
@@ -41,10 +42,10 @@
 }
 
 .landing-page .btn-container .btn-action {
-    margin: 5px 3%;
+    margin: 5px 1%;
     width: 70%;
     max-width: 350px;
-    height: 40%;
+    height: 45%;
 
     display: flex;
     justify-content: center;
@@ -56,11 +57,11 @@
     
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     color: var(--color-text-in-green);
 
     box-shadow: rgba(0, 0, 0, 0.6) -0.2rem 0.2rem 0.1rem ;
-    text-shadow: rgba(0, 0, 0, 0.6) -0.2rem 0.2rem 0.1rem ;
+    text-shadow: rgba(0, 0, 0, 0.6) -0.15rem 0.15rem 0.1rem ;
 }
 
 
@@ -69,9 +70,9 @@
 }
 
 .landing-page .btn-container #student-icon, #school-icon{
-    font-size: 3.5rem;
-    margin-right: 2rem;
-    -webkit-filter: drop-shadow(-0.2rem 0.2rem 0.1rem rgba(0,0,0,0.5));    
+    font-size: 6rem;
+    margin-right: 1rem;
+    -webkit-filter: drop-shadow(-0.1rem 0.1rem 0.1rem rgba(0,0,0,0.5));    
 }
 
 .landing-page .btn-container #school {
@@ -86,4 +87,9 @@
     .landing-page .logo-container {
         height: 65%;
     }
+
+    .landing-page .btn-container .btn-action {
+        height: 55%;
+    }
+
 }
