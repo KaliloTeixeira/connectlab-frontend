@@ -18,7 +18,7 @@
     width: 80%;
     max-width: 750px;
     -webkit-filter: drop-shadow(-0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5));
-
+    transition: all;
 }
 
 .landing-page .logo-container h2 {
@@ -62,21 +62,46 @@
 
     box-shadow: rgba(0, 0, 0, 0.6) -0.2rem 0.2rem 0.1rem ;
     text-shadow: rgba(0, 0, 0, 0.6) -0.15rem 0.15rem 0.1rem ;
+
 }
 
+.landing-page .btn-container .btn-action:hover {
+    transform: translateY(-5%);
+}
 
 .landing-page .btn-container #student {
     background-color: var(--color-secondary);
-}
+
+    background-image: -webkit-linear-gradient(45deg, #a0a0a0 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #a0a0a0 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .landing-page .btn-container #student:hover {
+    background-position: 0;
+  }
+
+  .landing-page .btn-container #school {
+    background-color: var(--color-primary);
+
+    background-image: -webkit-linear-gradient(45deg, var(--color-primary-lighter) 50%, transparent 50%);
+    background-image: linear-gradient(45deg, var(--color-primary-lighter) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .landing-page .btn-container #school:hover {
+    background-position: 0;
+  }
 
 .landing-page .btn-container #student-icon, #school-icon{
     font-size: 6rem;
     margin-right: 1rem;
     -webkit-filter: drop-shadow(-0.1rem 0.1rem 0.1rem rgba(0,0,0,0.5));    
-}
-
-.landing-page .btn-container #school {
-    background-color: var(--color-primary);
 }
 
 @media(min-width: 750px){
