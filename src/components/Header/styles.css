@@ -40,7 +40,7 @@
 }
 
 .header-container .backspace-icon #link:hover {
-    color: var(--color-text-in-white);
+    color: var(--color-primary);
 }
 
 .header-container .logo-container {
