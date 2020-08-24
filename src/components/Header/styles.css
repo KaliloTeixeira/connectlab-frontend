@@ -36,6 +36,11 @@
     font-size: 4rem;
     text-decoration: none;
     color: var(--color-text-in-green);
+    transition: all 0.3s;
+}
+
+.header-container .backspace-icon #link:hover {
+    color: var(--color-text-in-white);
 }
 
 .header-container .logo-container {
