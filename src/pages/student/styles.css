@@ -1,11 +1,30 @@
-.student    -page {
+.student-page {
     width: 100%;
     height: 100%;
+}
 
-    /* display: flex;
+.student-page .subtitle-container {
+    width: 90%;
+    max-width: 780px;
+
+    margin: auto;
+}
+.student-page .subtitle-container h2{
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: var(--color-primary);
+    text-shadow: rgba(0, 0, 0, 0.4) -0.1rem 0.1rem 0.5rem ;
+}
+
+.student-page .labs-container {
+    width: 90%;
+    max-width: 780px;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-
-    background-color: var(--color-primary-lighter);
-    color: var(--color-text-in-green); */
 }
