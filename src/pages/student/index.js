@@ -17,11 +17,8 @@ export default class Student extends React.Component {
                 </div>
                 <div className="labs-container">
                     <LabComponent />
-
                     <LabComponent />
-
                     <LabComponent />
-
                 </div>
             </div>
         )
