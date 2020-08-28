@@ -22,7 +22,7 @@
     max-width: 780px;
     height: fit-content;
     margin: auto;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
 
     display: flex;
     flex-wrap: wrap;
