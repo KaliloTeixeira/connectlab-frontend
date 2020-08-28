@@ -1,7 +1,7 @@
 .lab-component {
     width: 100%;
-    height: 30rem;
-    max-height: 380px;
+    height: fit-content;
+    max-height: 400px;
     padding: 3%;
     
     background-color: #ffffff;
@@ -12,13 +12,14 @@
     border-radius: 15px;
 
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 1rem;
     grid-template-areas: 
         "name vacances"
         "description description"
-        "available available"
-        "local local"
+        "weekday weekday"
+        "adress adress"
         "button button";
 
     font-family: "Roboto", sans-serif;
@@ -37,6 +38,9 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-around;
+
+    position: absolute;
 
     border-radius: 50%;
     border: solid 3px var(--color-secondary-lighter);
@@ -49,8 +53,7 @@
 }
 
 .lab-component .title-container {
-    grid-area: name;
-    margin-left: 1rem;
+    margin-left: 8rem;
 }
 
 .lab-component .title-container h1 {
@@ -61,6 +64,46 @@
     color: var(--color-text-in-white);
     font-weight: 300;
     font-size: 1.1rem;
+}
+
+.lab-component .vacances-container {
+    grid-area: vacances;
+    text-align:center;
+    margin-left: auto;
+}
+
+.lab-component #vacances-title,
+#description-title,
+#weekday-title,
+#adress-title {
+    color: var(--color-text-in-white);
+    font-size: 1.6rem;
+    /* margin-top: 1rem; */
+}
+
+.lab-component .description-container #description-content,
+#weekday-content,
+#adress-content {
+    color: var(--color-text-in-white);
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.lab-component .vacances-container #vacances-content {
+    color: var(--color-primary);
+    font-size: 3rem;
+}
+
+.lab-component .description-container {
+    grid-area: description;
+}
+
+.lab-component .weekday-container {
+    grid-area: weekday;
+}
+
+.lab-component .adress-container {
+    grid-area: adress;
 }
 
 .lab-component .contact-btn-container {
@@ -110,8 +153,8 @@
         grid-template-areas: 
             "name vacances"
             "description description"
-            "available available"
-            "local button";
+            "weekday weekday"
+            "adress button";
     }
 
     .lab-component .contact-btn-container{
@@ -123,7 +166,13 @@
         font-weight: 300;
         font-size: 1.5rem;
     }
-    
+
+    /* .lab-component #description-title,
+    #weekday-title,
+    #adress-title {
+        margin-top: 2rem;
+    } */
+
 }
 
 

@@ -10,7 +10,7 @@ export default class ContactSchool extends React.Component {
     render() {
         return (
             <div className="contact-container" >
-                <Header title={title} />
+                <Header title={title} destiny="/student" />
             </div>
         )
     }

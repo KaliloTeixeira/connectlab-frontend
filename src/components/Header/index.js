@@ -7,12 +7,15 @@ import logo from '../../assets/logo.png';
 
 const Header = (props) => {
     const title = props.title;
+    let destiny;
+
+    props.destiny ? destiny = props.destiny : destiny = '/';
 
     return (
         <div className="header-container">
             <div className="header-icons">
                 <div className="backspace-icon">
-                    <Link to={'/'} id="link" > <MdKeyboardBackspace /></Link>
+                    <Link to={destiny} id="link" > <MdKeyboardBackspace /></Link>
                 </div>
                 <div className="logo-container">
                     <img src={logo} className="logo" />
