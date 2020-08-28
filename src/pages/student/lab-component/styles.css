@@ -72,12 +72,16 @@
     margin-left: auto;
 }
 
-.lab-component #vacances-title,
-#description-title,
+.lab-component #description-title,
 #weekday-title,
 #adress-title {
     color: var(--color-text-in-white);
     font-size: 1.6rem;
+}
+
+.lab-component #vacances-title {
+    color: var(--color-text-in-white);
+    font-size: 1.2rem;
 }
 
 .lab-component .description-container #description-content,
@@ -109,8 +113,7 @@
     grid-area: button;
     width: 60%;
     height: 80%;
-    margin-left: auto;
-    margin-top: auto;
+    margin: auto;
 
 
     border-radius: 5px;
@@ -160,6 +163,9 @@
 
     .lab-component .contact-btn-container{
         width: 90%;
+        margin: unset;
+        margin-left: auto;
+        margin-top: auto;
     }
 
     .lab-component .title-container h2 {
@@ -168,11 +174,6 @@
         font-size: 1.5rem;
     }
 
-    /* .lab-component #description-title,
-    #weekday-title,
-    #adress-title {
-        margin-top: 2rem;
-    } */
 
 }
 
