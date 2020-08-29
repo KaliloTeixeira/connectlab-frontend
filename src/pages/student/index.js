@@ -17,9 +17,11 @@ export default class Student extends React.Component {
         labsInfo: [],
         schools: [],
         page: 1,
+        loading: false,
     }
 
     async componentDidMount() {
+        this.setState({ loading: true });
         this.getSchools();
     }
 
@@ -33,7 +35,7 @@ export default class Student extends React.Component {
     async getLabs(page = 1) {
         const response = await api.get(`/labs?page=${page}`);
         const { docs, ...labsInfo } = response.data;
-        this.setState({ labs: docs, labsInfo, page });
+        this.setState({ labs: docs, labsInfo, page, loading: false });
     }
 
     prevPage = () => {
@@ -57,7 +59,7 @@ export default class Student extends React.Component {
     }
 
     render() {
-        const { labs, schools, labsInfo, page } = this.state;
+        const { labs, schools, labsInfo, page, loading } = this.state;
 
         return (
             <div className="student-page" >
@@ -65,7 +67,12 @@ export default class Student extends React.Component {
                 <div className="subtitle-container">
                     <h2>Laboratórios Cadastrados...</h2>
                 </div>
+
                 <div className="labs-container">
+                    <div disabled={loading}>
+                        {loading && <div className="loading-spinner" ></div>}
+                    </div>
+
                     {labs.map(lab => {
                         const school = schools.find(school => school._id === lab.school);
                         return (

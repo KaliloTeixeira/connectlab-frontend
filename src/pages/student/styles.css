@@ -29,6 +29,22 @@
     justify-content: center;
 }
 
+.student-page .labs-container .loading-spinner {
+    height: 6rem;
+    width: 6rem;
+    margin: 15rem auto;
+
+    border-radius: 50%;
+    border: 8px solid rgba(0, 184, 184, 0.3);
+    border-left-color: var(--color-primary);
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg)}
+}
+
 .student-page .page-actions {
     display: flex;
     justify-content: center;
