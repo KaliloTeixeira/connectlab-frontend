@@ -93,4 +93,8 @@
     .student-page .subtitle-container h2{
         font-size: 3rem;
     }
+
+    .student-page .labs-container .loading-spinner {
+        margin: 10rem auto;
+    }
 }
