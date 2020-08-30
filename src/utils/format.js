@@ -8,24 +8,16 @@ const weekdays = [
     "Sábado"
 ];
 
-function convertHoursToMinutes(time) {
+export default convertHoursToMinutes = time => {
     const [hour, minutes] = time.split(':');
     return Number((hour * 60) + minutes)
 }
 
-function convertMinutesToHours(time) {
+export default convertMinutesToHours = time => {
     var hours, minutes;
 
     hours = parseInt(time / 60);
     minutes = time % 60;
 
     return (`${parseInt(hours)}h:${minutes}m`);
-}
-
-
-
-module.exports = {
-    weekdays,
-    convertHoursToMinutes,
-    convertMinutesToHours
 }

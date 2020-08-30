@@ -1,6 +1,5 @@
 import React from 'react';
 import api from '../../services/api';
-import { weekdays, convertHoursToMinutes } from '../../utils/format';
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import './styles.css';
@@ -10,6 +9,16 @@ import Header from '../../components/Header';
 import LabComponent from './lab-component/';
 
 const title = "Encontre aqui um cantinho para estudar...";
+
+const weekdays = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado"
+];
 
 export default class Student extends React.Component {
 

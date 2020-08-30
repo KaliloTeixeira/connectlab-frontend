@@ -1,14 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { weekdays, convertHoursToMinutes, convertMinutesToHours } from '../../../utils/format';
 
 
 import './styles.css';
+
+const weekdays = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado"
+];
+
+const convertMinutesToHours = time => {
+    var hours, minutes;
+
+    hours = parseInt(time / 60);
+    minutes = time % 60;
+
+    return (`${parseInt(hours)}h:${minutes}m`);
+}
+
 
 const LabComponent = (props) => {
 
     const school = props.school;
     const lab = props.lab;
+
 
     return (
 
