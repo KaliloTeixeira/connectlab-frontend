@@ -7,7 +7,7 @@
     width: 90%;
     max-width: 780px;
 
-    margin: auto;
+    margin: 0.8rem auto;
 }
 .student-page .subtitle-container h2{
     font-weight: 300;
@@ -88,10 +88,6 @@
     text-shadow: rgba(0, 0, 0, 0.6) -0.07rem 0.07rem 0.1rem ;
     font-size: 1.8rem;
 }
-
-
-
-
 
 .student-page .search-schools-container {
     width: 90%;
