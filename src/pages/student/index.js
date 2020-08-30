@@ -1,7 +1,7 @@
 import React from 'react';
 import api from '../../services/api';
 
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdSearch } from 'react-icons/md';
 import './styles.css';
 
 import { Link } from 'react-router-dom';
@@ -29,6 +29,7 @@ export default class Student extends React.Component {
         page: 1,
         loading: false,
         forms: {
+            city: String,
             weekday: Number,
             time: Number,
         }
@@ -72,6 +73,10 @@ export default class Student extends React.Component {
         window.scrollTo(0, 0);
     }
 
+    handleCityChange = (event) => {
+        this.setState({ forms: { city: event.target.value } });
+    }
+
     handleWeekdayChange = (event) => {
         this.setState({ forms: { weekday: event.target.value } });
     }
@@ -94,10 +99,15 @@ export default class Student extends React.Component {
 
                 <div className="search-schools-container">
                     <form id="search-schools-forms" onSubmit={this.handleFormsSubmit}>
+                        <div className="input-block">
+                            <MdSearch className="search-icon" />
+                            <input type="text" name="city" id="city" placeholder="Cidade da Intituição" onChange={this.handleCityChange} />
+                        </div>
+
+
                         <div className="select-block">
-                            <label for="weekday">Dia da semana: </label>
-                            <select name="weekday" id="weekday" onChange={this.handleWeekdayChange}>
-                                <option value="" disabled="" selected=""></option>
+                            <select name="weekday" id="weekday" placeholder="Dia da semana" onChange={this.handleWeekdayChange}>
+                                <option value="" selected="">Dia da semana</option>
                                 {weekdays.map(weekday => (
                                     <option value={weekdays.indexOf(weekday)}>
                                         {weekday}
@@ -106,11 +116,13 @@ export default class Student extends React.Component {
                             </select>
                         </div>
 
-                        <div class="input-block">
+                        {/* <div class="input-block">
                             <label for="time">Horário: </label>
-                            <input type="time" name="time" id="time" min="0" max="24" value={this.state.forms.time} onChange={this.handleTimeChange} />
+                            <input type="time" name="time" id="time" min="0" max="24" placeholder="horário" value={this.state.forms.time} onChange={this.handleTimeChange} />
+                        </div> */}
+                        <div className="forms-submit-container">
+                            <button type="submit">Buscar</button>
                         </div>
-                        <button type="submit">Filtrar</button>
                     </form>
                 </div>
 
