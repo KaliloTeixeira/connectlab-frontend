@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { weekdays, convertHoursToMinutes, convertMinutesToHours } from '../../../utils/format';
+
 
 import './styles.css';
 
@@ -30,7 +32,8 @@ const LabComponent = (props) => {
             </div>
             <div className="weekday-container">
                 <p id="weekday-title">Disponibilidade</p>
-                <p id="weekday-content" >{lab.weekday}</p>
+                <p className="weekday-content">  {weekdays[lab.weekday]} </p>
+                <p className="weekday-content">  De {convertMinutesToHours(lab.time_from)} até {convertMinutesToHours(lab.time_to)}  </p>
             </div>
             <div className="adress-container">
                 <p id="adress-title">Local</p>

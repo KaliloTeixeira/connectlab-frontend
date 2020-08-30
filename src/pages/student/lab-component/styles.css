@@ -85,11 +85,16 @@
 }
 
 .lab-component .description-container #description-content,
-#weekday-content,
+.weekday-content,
 #adress-content {
     color: var(--color-text-in-white);
     font-weight: 300;
     font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.weekday-content strong {
+    font-weight: 500;
 }
 
 .lab-component .vacances-container #vacances-content {

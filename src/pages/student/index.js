@@ -1,5 +1,6 @@
 import React from 'react';
 import api from '../../services/api';
+import { weekdays, convertHoursToMinutes } from '../../utils/format';
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 import './styles.css';
@@ -18,6 +19,10 @@ export default class Student extends React.Component {
         schools: [],
         page: 1,
         loading: false,
+        forms: {
+            weekday: Number,
+            time: Number,
+        }
     }
 
     async componentDidMount() {
@@ -58,12 +63,48 @@ export default class Student extends React.Component {
         window.scrollTo(0, 0);
     }
 
+    handleWeekdayChange = (event) => {
+        this.setState({ forms: { weekday: event.target.value } });
+    }
+
+    handleTimeChange = (event) => {
+        this.setState({ forms: { time: event.target.value } });
+    }
+
+    handleFormsSubmit(event) {
+        alert(this.state.forms);
+        event.preventDefault();
+    }
+
     render() {
         const { labs, schools, labsInfo, page, loading } = this.state;
 
         return (
             <div className="student-page" >
                 <Header title={title} />
+
+                <div className="search-schools-container">
+                    <form id="search-schools-forms" onSubmit={this.handleFormsSubmit}>
+                        <div className="select-block">
+                            <label for="weekday">Dia da semana: </label>
+                            <select name="weekday" id="weekday" onChange={this.handleWeekdayChange}>
+                                <option value="" disabled="" selected=""></option>
+                                {weekdays.map(weekday => (
+                                    <option value={weekdays.indexOf(weekday)}>
+                                        {weekday}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <div class="input-block">
+                            <label for="time">Horário: </label>
+                            <input type="time" name="time" id="time" min="0" max="24" value={this.state.forms.time} onChange={this.handleTimeChange} />
+                        </div>
+                        <button type="submit">Filtrar</button>
+                    </form>
+                </div>
+
                 <div className="subtitle-container">
                     <h2>Laboratórios Cadastrados...</h2>
                 </div>
@@ -86,7 +127,7 @@ export default class Student extends React.Component {
                     <button disabled={page === labsInfo.pages} onClick={this.nextPage} >  <MdKeyboardArrowRight /> </button>
                 </div>
 
-            </div>
+            </div >
         )
     }
 
