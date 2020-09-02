@@ -1,9 +1,203 @@
 .school-page {
     width: 100%;
     height: 100%;
+}
 
-    /* display: flex; */
-    /* justify-content: center; */
+.school-page .school-forms-container {
+    width: 90%;
+    max-width: 780px;
+    height: fit-content;
+    margin: -3rem auto 3rem;
+    padding: 1rem 3rem;
 
-    /* color: var(--color-text-in-green); */
+    border-radius: 1rem;
+    border: solid 2px rgba(130, 130, 130, 0.3);
+    color: var(--color-text-in-white);
+    font-family: "Roboto" sans-serif;
+
+    background-color: #ffffff;
+}
+
+.school-page .school-forms-container .school-forms-subtitle {
+    border-bottom: 1px solid rgba(102, 212, 212, 0.5);
+    font-size: 0.9rem;
+    line-height: 3rem;
+}
+
+.school-page .school-forms-container .school-forms-section {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.school-page .school-forms-section .school-input-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.school-page .school-forms-section .school-input-block label {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.school-page .school-forms-section .school-input-block input {
+    width: 100%;
+    height: 4rem;
+    
+    background-color: var(--color-background);
+    border: 1px solid rgba(102, 212, 212, 0.5);
+    border-radius: 5px;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-text-in-white);
+    padding-left: 1rem;
+}
+
+.school-page .school-forms-section .school-input-block input:focus {
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.school-page .school-forms-section #city-state-block {
+    flex-wrap: unset;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.school-page .school-forms-section #city-state-block #city {
+    width: 78%;
+}
+
+.school-page .school-forms-section #city-state-block #state {
+    width: 20%;
+}
+
+.school-page .school-forms-section #city-state-block #city input,
+.school-page .school-forms-section #city-state-block #state input {
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.school-page .school-forms-section .lab-available {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "weekday weekday"
+    "time-from time-to";
+
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+}
+
+
+.school-page .school-forms-section .lab-available .school-select-block label,
+.school-page .school-forms-section .lab-available .lab-input-block label {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.school-page .school-forms-section .lab-available .school-select-block select,
+.school-page .school-forms-section .lab-available .lab-input-block input {
+    width: 100%;
+    height: 4rem;
+    
+    background-color: var(--color-background);
+    border: 1px solid rgba(102, 212, 212, 0.5);
+    border-radius: 5px;
+
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-text-in-white);
+    padding-left: 1rem;
+}
+
+.school-page .school-forms-section .lab-available .school-select-block select:focus,
+.school-page .school-forms-section .lab-available .lab-input-block input:focus {
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.school-page .school-forms-section .lab-available .school-select-block {
+    grid-area: weekday;
+}
+
+.school-page .school-forms-section .lab-available .lab-input-block {
+    grid-area: time-from time-to;
+    margin-top: 0.5rem;
+    width: 95%;
+}
+
+.school-page .btn-container {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid rgba(102, 212, 212, 0.5);
+}
+
+.school-page .btn-action {
+    margin: 5px 1%;
+    width: 20rem;
+    max-width: 250px;
+    height: 6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    border: none;
+    border-radius: 7px;
+    
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: var(--color-text-in-green);
+
+    box-shadow: rgba(0, 0, 0, 0.6) -0.2rem 0.2rem 0.1rem ;
+    text-shadow: rgba(0, 0, 0, 0.6) -0.1rem 0.1rem 0.1rem ;
+
+    cursor: pointer;
+}
+
+.school-page .btn-action:hover {
+    transform: translateY(-5%);
+}
+
+.school-page .btn-action {
+    background-color: var(--color-primary);
+
+    background-image: -webkit-linear-gradient(45deg, var(--color-primary-lighter) 50%, transparent 50%);
+    background-image: linear-gradient(45deg, var(--color-primary-lighter) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .school-page .btn-action:hover {
+    background-position: 0;
+  }
+
+@media(min-width: 750px){
+    .school-page .school-forms-section .lab-available {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .school-page .school-forms-section .lab-available .school-select-block {
+        width: 56%;
+    }
+    
+    .school-page .school-forms-section .lab-available .lab-input-block {
+        width: 20%;
+        margin-top: unset;
+    }
 }
