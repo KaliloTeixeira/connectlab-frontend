@@ -42,7 +42,8 @@
     margin-top: 1rem;
 }
 
-.school-page .school-forms-section .school-input-block input {
+.school-page .school-forms-section .school-input-block input,
+.school-page .school-forms-section .school-input-block textarea {
     width: 100%;
     height: 4rem;
     
@@ -56,11 +57,19 @@
     padding-left: 1rem;
 }
 
-.school-page .school-forms-section .school-input-block input:focus {
+.school-page .school-forms-section .school-input-block input:focus,
+.school-page .school-forms-section .school-input-block textarea:focus {
     border-bottom: 2px solid var(--color-primary);
 }
 
-.school-page .school-forms-section #city-state-block {
+.school-page .school-forms-section .school-input-block textarea {
+    min-height: 8rem;
+    resize: none;
+    padding-top: 0.5rem;
+    font-family: "Roboto" sans-serif;
+}
+
+.school-page .school-forms-section #city-state-block{
     flex-wrap: unset;
     justify-content: space-between;
     margin-top: 1rem;
@@ -85,17 +94,19 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "weekday weekday"
+    "weekday vacances"
     "time-from time-to";
 
     justify-content: space-between;
+    column-gap: 1rem;
 
     margin-bottom: 2rem;
 }
 
 
 .school-page .school-forms-section .lab-available .school-select-block label,
-.school-page .school-forms-section .lab-available .lab-input-block label {
+.school-page .school-forms-section .lab-available .lab-input-block label,
+.school-page .school-forms-section .lab-available .vacances-number label {
     font-size: 1.2rem;
     line-height: 2rem;
     font-weight: 300;
@@ -103,7 +114,8 @@
 }
 
 .school-page .school-forms-section .lab-available .school-select-block select,
-.school-page .school-forms-section .lab-available .lab-input-block input {
+.school-page .school-forms-section .lab-available .lab-input-block input,
+.school-page .school-forms-section .lab-available .vacances-number input {
     width: 100%;
     height: 4rem;
     
@@ -118,18 +130,25 @@
 }
 
 .school-page .school-forms-section .lab-available .school-select-block select:focus,
-.school-page .school-forms-section .lab-available .lab-input-block input:focus {
+.school-page .school-forms-section .lab-available .lab-input-block input:focus,
+.school-page .school-forms-section .lab-available .vacances-number input:focus {
     border-bottom: 2px solid var(--color-primary);
 }
 
 .school-page .school-forms-section .lab-available .school-select-block {
     grid-area: weekday;
+    width: 140%;
+}
+.school-page .school-forms-section .lab-available .vacances-number {
+    grid-area: vacances;
+    margin-left: auto;
+    width: 60%;
 }
 
 .school-page .school-forms-section .lab-available .lab-input-block {
     grid-area: time-from time-to;
     margin-top: 0.5rem;
-    width: 95%;
+    width: 100%;
 }
 
 .school-page .btn-container {
@@ -157,7 +176,7 @@
     border-radius: 7px;
     
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     font-size: 2rem;
     color: var(--color-text-in-green);
 
@@ -188,16 +207,19 @@
 
 @media(min-width: 750px){
     .school-page .school-forms-section .lab-available {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        
+        grid-template-columns: 50% 15% 15% 15%;
+        grid-template-rows: 1fr;
     }
 
-    .school-page .school-forms-section .lab-available .school-select-block {
-        width: 56%;
+    .school-page .school-forms-section .lab-available .school-select-block,
+    .school-page .school-forms-section .lab-available .vacances-number {
+        width: unset;
     }
     
     .school-page .school-forms-section .lab-available .lab-input-block {
-        width: 20%;
         margin-top: unset;
     }
+    
 }
