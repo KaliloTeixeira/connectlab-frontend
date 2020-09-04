@@ -116,10 +116,6 @@ export default class Student extends React.Component {
                             </select>
                         </div>
 
-                        {/* <div class="input-block">
-                            <label for="time">Horário: </label>
-                            <input type="time" name="time" id="time" min="0" max="24" placeholder="horário" value={this.state.forms.time} onChange={this.handleTimeChange} />
-                        </div> */}
                         <div className="forms-submit-container">
                             <button type="submit">Buscar</button>
                         </div>
